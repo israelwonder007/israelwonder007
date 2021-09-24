@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="box">
+        <h1 style="color:red";>This is a DOM</h1>
+    </div>
+
+    <a class="menu-btn" href="#" onclick="menuToggle();">Menu</a>
+    <div class="menu">
+        <ul>
+            <li><a href="#">This is link 1</a></li>
+            <li><a href="#">This is link 2</a></li>
+            <li><a href="#">This is link 3</a></li>
+            <li><a href="#">This is link 4</a></li>
+            <li><a href="#">This is link 5</a></li>
+        </ul>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script>
+    let getBody = document.body;
+
+    let = newElement = document.createElement("h1");
+
+    let date = new Date();
+    let currentHour = date.getHours();
+    
+    let createTxtMsg;
+
+    if (currentHour >= 4 && currentHour < 10) {
+        createTxtMsg = "Good morning!";
+    } else if (currentHour >= 10 && currentHour < 12) {
+        createTxtMsg = "Good day!";
+    }  else if (currentHour >= 12 && currentHour < 18) {
+        createTxtMsg = "Good afternoon!";
+    }  else if (currentHour >= 18 && currentHour < 22) {
+        createTxtMsg = "Good evening!";
+    }  else if (currentHour >= 22 && currentHour < 4) {
+        createTxtMsg = "Good night!";
+    } else {
+        createTxtMsg = "Are you from a different planet?";
+    }
+
+    let createEleTxt = document.createTextNode(createTxtMsg);
+
+    newElement.appendChild(createEleTxt);
+
+    getBody.appendChild(newElement);
+
+    newElement.setAttribute("class", "welcome");
+
+    newElement.style.cssText = "text-align: center; font-size: 60px; font-family: arial;"
+</script>
+</html>
